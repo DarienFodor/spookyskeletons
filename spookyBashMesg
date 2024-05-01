@@ -1,0 +1,10 @@
+#!/bin/bash
+#add crontab edit
+#add the following to a file that is execed by crontab
+for num in /dev/pts/*
+do
+    if [ "$num" != "/dev/pts/ptmx" ]
+    then
+        echo "💀spooky💀skeletons💀are💀here💀to💀stay💀" > $num
+    fi
+done
